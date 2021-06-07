@@ -1,0 +1,27 @@
+.barra-menu {
+    /*display: inline-block;*/
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    vertical-align: middle;
+    background-color: rgb(66, 183, 199);
+}
+
+.tit-aqua {
+    padding-left: 0.5rem;
+    margin: 0.1rem;
+    color: rgb(66, 183, 199);
+    font-size: 32px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    /*padding-bottom: 2rem;*/
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+}
