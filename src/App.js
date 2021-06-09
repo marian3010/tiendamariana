@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 //COMPONENTES
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 class App extends Component {
     render() {
@@ -10,7 +11,7 @@ class App extends Component {
           <div className = 'App-header'>
             <div>
               <NavBar />
-              <h4>Esta es la galería de fotos y dibujos de Coco.</h4>
+              <ItemListContainer greeting={"Bienvenidos a la galería de Cocó! Proximamente fotos y dibujos a la venta."} />
             </div>
          </div>
         );
