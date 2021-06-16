@@ -16,7 +16,7 @@ class NavBar extends Component {
 					<a href = "#Varios" > Varios </a>
 					<a href = "#Cart" > <CartWidget /> </a>
 				</nav>
-				<p className = 'tit-aqua' > Coco 's Gallery</p>
+				<p className = 'tit-aqua' > Coco's Gallery</p>
 				
 			</div>
 		

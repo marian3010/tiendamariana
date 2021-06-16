@@ -1,0 +1,36 @@
+.boton-carrito {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    border-radius: 5%;
+    margin-top: 20px;
+    max-height: 60px;
+}
+
+.boton-cantidad {
+    background-color: white;
+    border-color: white;
+    font-size: 20px;
+    color: darkslategray;
+    text-align: center;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.contenedor {
+    margin-top: 20px;
+}
+
+.contador {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+    max-height: 30px;
+}
+
+p {
+    margin: 0px;
+}
