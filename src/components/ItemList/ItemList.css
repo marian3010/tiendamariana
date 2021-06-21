@@ -1,0 +1,17 @@
+.productWrapper {
+    border: cadetblue 1.5px solid;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+hover .productWrapper {
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.grilla {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
