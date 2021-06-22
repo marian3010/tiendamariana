@@ -11,7 +11,7 @@ class App extends Component {
           <div className = 'App-header'>
             <div>
               <NavBar />
-              <ItemListContainer greeting={"Bienvenidos a la galería de Cocó! Proximamente fotos y dibujos a la venta."} />
+              <ItemListContainer greeting={"Bienvenidos a la galería de Cocó!"} />
             </div>
          </div>
         );

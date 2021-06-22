@@ -1,8 +1,9 @@
 .boton-carrito {
-    background-color: darkslategray;
+    background-color: rgb(49, 179, 49);
+    border-color: rgb(49, 179, 49);
+    border-radius: 5%;
     color: white;
     text-align: center;
-    border-radius: 5%;
     margin-top: 20px;
     max-height: 60px;
 }
@@ -10,8 +11,8 @@
 .boton-cantidad {
     background-color: white;
     border-color: white;
-    font-size: 20px;
-    color: darkslategray;
+    font-size: 25px;
+    color: rgb(53, 112, 112);
     text-align: center;
     max-height: 30px;
     max-width: 30px;

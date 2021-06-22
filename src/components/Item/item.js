@@ -1,29 +1,17 @@
-export const item = [{
-        id: 1,
-        title: "Jupiter",
-        price: 220,
-        stock: 10,
-        img: "https://picsum.photos/id/1032/200/300",
-    },
-    {
-        id: 2,
-        title: "Marte",
-        price: 200,
-        stock: 5,
-        img: "https://picsum.photos/id/1016/200/300",
-    },
-    {
-        id: 3,
-        title: "Tierra",
-        price: 200,
-        stock: 6,
-        img: "https://picsum.photos/id/1015/200/300",
-    },
-    {
-        id: 4,
-        title: "Saturno",
-        price: 210,
-        stock: 10,
-        img: "https://picsum.photos/id/115/200/300",
-    }
-];
+import ItemCount from '../ItemCount/ItemCount'
+
+export const Item = ({ product }) => {
+
+    const onAdd = (cantCart) => {
+        alert(`Se agregaron al carrito ${cantCart} items`);
+    };
+
+    return (
+      <div className="productWrapper">
+        <img src={product.img} alt="product" />
+        <p>{product.title}</p>
+        <p>${product.price}</p>
+        <ItemCount stock = { product.stock } valorInicial = { 1 } onAdd = { onAdd } />
+      </div>
+    );
+  };

@@ -1,13 +1,16 @@
 .productWrapper {
-    border: cadetblue 1.5px solid;
+    border: rgb(49, 179, 49) 1.5px solid;
     padding: 5px;
     text-align: center;
     margin: 10px;
 }
 
-hover .productWrapper {
-    background-color: greenyellow;
-    cursor: pointer;
+div#ZoomOut {
+    transition: all 1s;
+}
+
+div#ZoomOut img:hover {
+    transform: scale(1.1);
 }
 
 .grilla {

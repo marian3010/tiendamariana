@@ -1,0 +1,19 @@
+.itemDetailCont {
+    background: white;
+    padding: 10px;
+    position: fixed;
+    width: 600px;
+    top: 40px;
+    bottom: 40px;
+}
+
+.itemDetail {
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
