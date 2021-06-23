@@ -1,4 +1,4 @@
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount';
 
 export const Item = ({ product }) => {
 
@@ -13,5 +13,6 @@ export const Item = ({ product }) => {
         <p>${product.price}</p>
         <ItemCount stock = { product.stock } valorInicial = { 1 } onAdd = { onAdd } />
       </div>
-    );
-  };
+       
+    )
+}    

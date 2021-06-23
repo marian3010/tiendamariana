@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { ItemDetail } from "./ItemDetail";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
+import './ItemDetailContainer.css'
 
-export const ItemDetailContainer = () => {
+const ItemDetailContainer = () => {
     const prodDetalle = {
         id: 2,
-        name: "Marte",
+        title: "Marte",
         img: "https://gdurl.com/1ePk",
         stock: 5,
         price: 1200,
@@ -31,3 +32,5 @@ export const ItemDetailContainer = () => {
         </div>
     );
 };
+
+export default ItemDetailContainer;
