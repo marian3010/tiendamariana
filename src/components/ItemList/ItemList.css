@@ -1,8 +1,24 @@
 .productWrapper {
-    border: rgb(49, 179, 49) 1.5px solid;
+    border: rgb(49, 179, 49) solid;
     padding: 5px;
     text-align: center;
     margin: 10px;
+}
+
+.titulo {
+    color: black;
+    font-weight: 600px;
+    text-decoration: none;
+}
+
+.productWrapper a {
+    text-decoration: none;
+}
+
+.precio {
+    color: black;
+    font-weight: 400px;
+    text-decoration: none;
 }
 
 div#ZoomOut {

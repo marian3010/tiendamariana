@@ -1,5 +1,5 @@
 export const catalogoProds = [{
-        id: 1,
+        id: "1",
         title: "Jupiter",
         price: 950,
         stock: 10,
@@ -7,7 +7,7 @@ export const catalogoProds = [{
         img: "https://gdurl.com/rA4y",
     },
     {
-        id: 2,
+        id: "2",
         title: "Marte",
         price: 1200,
         stock: 5,
@@ -15,7 +15,7 @@ export const catalogoProds = [{
         img: "https://gdurl.com/1ePk",
     },
     {
-        id: 3,
+        id: "3",
         title: "Tierra",
         price: 800,
         stock: 6,
@@ -23,7 +23,7 @@ export const catalogoProds = [{
         img: "https://gdurl.com/D2Yl",
     },
     {
-        id: 4,
+        id: "4",
         title: "Saturno",
         price: 700,
         stock: 10,

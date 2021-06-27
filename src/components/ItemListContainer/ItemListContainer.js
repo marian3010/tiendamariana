@@ -2,7 +2,7 @@ import { ItemList } from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
 import { catalogoProds } from "../Item/catalogoProds";
 import './ItemListContainer.css'
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+
 
 
 const ItemListContainer = () => {
@@ -22,7 +22,6 @@ const ItemListContainer = () => {
     return ( 
         <div className = 'item-container'>
             <ItemList products={products}/>
-            <ItemDetailContainer />
         </div>
     )
 };

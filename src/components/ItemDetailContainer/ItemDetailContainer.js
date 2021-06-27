@@ -1,34 +1,37 @@
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css'
+import { useParams } from "react-router";
+import { catalogoProds } from "../Item/catalogoProds";
 
 const ItemDetailContainer = () => {
-    const prodDetalle = {
-        id: 2,
-        title: "Marte",
-        img: "https://gdurl.com/1ePk",
-        stock: 5,
-        price: 1200,
-    };
-
+    const { id } = useParams();
     const [product, setProduct] = useState({});
-
+    
+    
     const getProducts = new Promise((res, rej) => {
         setTimeout(function() {
-            res(prodDetalle);
+            res(catalogoProds);
         }, 2000);
     });
 
     useEffect(() => {
+       
         getProducts
-            .then((res) => setProduct(res))
-            .catch((err) => alert(err))
-
-    });
+          .then((res) => {
+            res.forEach((item) => {
+              if (item.id === id) {
+                setProduct(item);
+              }
+            });
+          })
+          .catch((err) => alert(err))
+         
+      }, []);
 
     return ( 
         <div className = "itemDetailCont">
-            <ItemDetail product = { product } />
+            <ItemDetail product = { product } /> 
         </div>
     );
 };

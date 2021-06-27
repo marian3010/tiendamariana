@@ -1,24 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from "react-router-dom";
 import './NavBar.css';
 import logo from './cocoLogoNuevo.jpg';
 import CartWidget from '../CartWidget/CartWidget';
+import DropDown from "./DropDown";
 
-class NavBar extends Component {
-    render() {
-        return ( 
-            <div>
-                <nav className = 'barra-menu'>
-                    <a href = "index.html" > < img src = { logo } alt = "Logo" /> </a>
-                    <a href = "index.html" > Inicio </a>
-                    <a href = "#Planetas" > Planetas </a>
-                    <a href = "#Flores" > Flores </a>
-                    <a href = "#Contacto" > Contacto </a>
-                    <a href = "#Cart" > < CartWidget /> </a>
-                </nav>
-            </div>
+function NavBar () {
+    return ( 
+        
+        <nav className = "barra-menu">
+            <ul className="lista-menu">
+                <li className="item-menu">
+                 <Link to="/"><img className="logo" src = { logo } alt = "Logo" /></Link>   
+                </li>
+                <li className="item-menu">
+                    <Link to="/">Inicio</Link>
+                </li>
+                <li className="item-menu dropdown">
+                    <DropDown />
+                </li>
+                <li className="item-menu">
+                    <Link to="/Contact">Contacto</Link>
+                </li>
+                <li>
+                    <Link to="/Cart">
+                        < CartWidget />
+                    </Link>
+                </li>
+            </ul>
+        </nav>
+          
 
-        );
-    }
+    );
 }
 
 export default NavBar;
