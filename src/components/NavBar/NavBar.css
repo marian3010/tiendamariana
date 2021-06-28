@@ -43,6 +43,10 @@
     text-align: center;
 }
 
+ul {
+    padding: 10px;
+}
+
 
 /* Links inside the dropdown */
 
