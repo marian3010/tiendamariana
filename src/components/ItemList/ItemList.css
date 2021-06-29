@@ -11,8 +11,14 @@
     text-decoration: none;
 }
 
-.productWrapper a {
+a {
+    color: black;
     text-decoration: none;
+}
+
+a :hover {
+    color: rgb(49, 179, 49);
+    text-decoration: underline;
 }
 
 .precio {

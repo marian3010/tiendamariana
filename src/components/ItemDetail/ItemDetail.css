@@ -19,3 +19,13 @@
     font-size: 30px;
     font-weight: 600;
 }
+
+.btn-payment {
+    background-color: #f5a453;
+    color: black;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5%;
+    padding: 5px;
+    text-align: center;
+}
