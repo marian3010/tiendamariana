@@ -11,12 +11,14 @@ import Cart from './Views/Cart/Cart';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { CartProvider } from "./context/CartContext";
 
 function App () {
     return ( 
       <Router>
-        <div className = 'App-header'>
-          <NavBar />
+        <CartProvider>
+          <div className = 'App-header'>
+            <NavBar />
             <Switch>
               <Route path="/Contact" component ={Contact} />
               <Route path="/Cart" component ={Cart} />
@@ -30,7 +32,8 @@ function App () {
                 <ItemListContainer />
               </Route>
             </Switch>
-        </div>
+          </div>
+        </CartProvider>
       </Router>
     );
 }

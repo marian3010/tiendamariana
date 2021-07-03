@@ -36,7 +36,9 @@ div#ZoomOut img:hover {
 }
 
 .grilla {
-    display: flex;
-    flex-direction: row;
+    /*display: flex;
+    flex-direction: row;*/
+    display: grid;
     justify-content: space-around;
+    grid-template-columns: auto auto auto auto;
 }
