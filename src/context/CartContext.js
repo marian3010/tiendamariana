@@ -6,7 +6,7 @@ export const CartContext = createContext();
 
 export function CartProvider ({children}) {
     const [cart, setCart] = useState([]);
-
+    
     const agregarProd = (id, title, price, cantCart) => {
         const indice = cart.findIndex((prod) => prod.id ===id);
         if (indice < 0) {
@@ -20,11 +20,14 @@ export function CartProvider ({children}) {
         setCart([]);
     }
 
-    const eliminoProduct = (prodInCart) => {
+        const eliminoProduct = (prodInCart) => {
         const indiceDelete = cart.findIndex((item) => item.id === prodInCart.id);
-    
+        const copiaCart = Array.from(cart);
+
         if (indiceDelete >= 0) {
-          cart.splice(indiceDelete, 1);
+          copiaCart.splice(indiceDelete, 1);
+          setCart(copiaCart);   
+
         }
       };
 

@@ -21,6 +21,14 @@
     color: rgb(49, 179, 49);
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.vaciar-carro {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 20px;
 }
 
 .carrito {
@@ -32,4 +40,12 @@
 .nombre {
     font-size: 30px;
     font-weight: 600;
+}
+
+.boton-lista {
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 5%;
+    padding: 10px;
 }

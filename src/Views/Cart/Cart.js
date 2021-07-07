@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import './Cart.css';
 
@@ -13,23 +14,26 @@ function Cart () {
     
     return (
       <div className="carrito">
-          <i class="fas fa-trash color-verde" onClick={() => {clear();}}>  Vacío el carrito </i>
         {cart.length ? (
-          cart.map((product) => (
-            <div className="cartProductsWrapper">
+          <i class="fas fa-trash vaciar-carro" onClick={() => {clear();}}>  Vaciar el carrito </i>
+        ) : (null)}
+        {cart.length ? (
+           cart.map((product) => (
+              <div className="cartProductsWrapper">
                 <div key={product.id} className="cartProduct">
-                    <p className="nombre">{product.title}</p>
-                    <p>Precio total ${calcularPrecio(product.price, product.cantCart)}</p>
-                    <p>Cantidad: {product.cantCart}</p>
-                    <i class="fas fa-trash color-verde" onClick={() => {eliminoProduct(product);}} /> 
-                   
+                  <p className="nombre">{product.title}</p>
+                  <p>Precio total ${calcularPrecio(product.price, product.cantCart)}</p>
+                  <p>Cantidad: {product.cantCart}</p>
+                  <i class="fas fa-trash color-verde" onClick={() => {eliminoProduct(product);}}>Eliminar Producto</i>
+                
                 </div>
-            </div>
-              
+              </div>
           ))
-          
         ) : (
-          <h1>El carrito no tiene productos!</h1>
+          <div>
+            <h1>El carrito no tiene productos!</h1>
+            <Link to="/" className="boton-lista" onClick={() => {}}>Ir al catálogo</Link>
+          </div>  
         )}
       </div>
     );
