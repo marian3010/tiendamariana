@@ -4,17 +4,11 @@
     align-items: center;
     margin-left: 10px;
     margin-bottom: 10px;
-}
-
-.cartProduct {
-    display: grid;
-    /*flex-direction: column;*/
-    justify-content: center;
-    width: 100%;
     border-style: solid;
     border-color: green;
     background-color: lightcyan;
     padding: 10px;
+    max-width: 450px;
 }
 
 .color-verde {
@@ -48,4 +42,8 @@
     font-size: 14px;
     border-radius: 5%;
     padding: 10px;
+}
+
+.carrito-vacio {
+    text-align: center;
 }

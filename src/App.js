@@ -10,6 +10,7 @@ import Cart from './Views/Cart/Cart';
 //IMPORTO COMPONENTES
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCategoryContainer from './components/ItemListContainer/ItemCategoryContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from "./context/CartContext";
 
@@ -23,7 +24,7 @@ function App () {
               <Route path="/Contact" component ={Contact} />
               <Route path="/Cart" component ={Cart} />
               <Route path="/category/:id">
-                <ItemListContainer />
+                <ItemCategoryContainer />
               </Route>
               <Route path="/products/:id">
                 <ItemDetailContainer />

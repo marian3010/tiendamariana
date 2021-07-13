@@ -9,6 +9,8 @@ export function CartProvider ({children}) {
     
     const agregarProd = (id, title, price, cantCart) => {
         const indice = cart.findIndex((prod) => prod.id ===id);
+        console.log ("carrito", cart);
+        console.log ("Indice", indice);
         if (indice < 0) {
             setCart([...cart,{id: id, title: title, price: price, cantCart: cantCart,},]);
         } else {

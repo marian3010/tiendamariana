@@ -6,39 +6,36 @@ import './Cart.css';
 
 
 function Cart () {
-    const { cart, eliminoProduct, clear} = useContext(CartContext);
-  
-    const calcularPrecio = (price, cantCart) => {
-      return price * cantCart;
-    };
-    
-    return (
-      <div className="carrito">
-        {cart.length ? (
-          <i class="fas fa-trash vaciar-carro" onClick={() => {clear();}}>  Vaciar el carrito </i>
-        ) : (null)}
-        {cart.length ? (
-           cart.map((product) => (
-              <div className="cartProductsWrapper">
-                <div key={product.id} className="cartProduct">
-                  <p className="nombre">{product.title}</p>
-                  <p>Precio total ${calcularPrecio(product.price, product.cantCart)}</p>
-                  <p>Cantidad: {product.cantCart}</p>
-                  <i class="fas fa-trash color-verde" onClick={() => {eliminoProduct(product);}}>Eliminar Producto</i>
-                
-                </div>
-              </div>
-          ))
-        ) : (
-          <div>
-            <h1>El carrito no tiene productos!</h1>
-            <Link to="/" className="boton-lista" onClick={() => {}}>Ir al catálogo</Link>
-          </div>  
-        )}
-      </div>
-    );
-  };
+  const { cart, eliminoProduct, clear} = useContext(CartContext);
 
-  export default Cart;
+  const calcularPrecio = (price, cantCart) => {
+    return price * cantCart;
+  };
+  
+  return (
+    <div className="carrito">
+      {cart.length ? (
+        <i class="fas fa-trash vaciar-carro" onClick={() => {clear();}}>  Vaciar el carrito </i>
+      ) : (null)}
+      {cart.length ? (
+         cart.map((product) => (
+            <div key={product.id} className="cartProductsWrapper">
+              <p className="nombre">{product.title}</p>
+              <p>Precio total ${calcularPrecio(product.price, product.cantCart)}</p>
+              <p>Cantidad: {product.cantCart}</p>
+              <i class="fas fa-trash color-verde" onClick={() => {eliminoProduct(product);}}>Eliminar Producto</i>
+            </div>
+        ))
+      ) : (
+        <div>
+          <h1>El carrito no tiene productos!</h1>
+          <Link to="/" className="boton-lista" onClick={() => {}}>Ir al catálogo</Link>
+        </div>  
+      )}
+    </div>
+  );
+};
+
+export default Cart;
 
 

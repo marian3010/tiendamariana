@@ -4,33 +4,32 @@ import { useParams } from "react-router";
 import { db} from '../../firebase';
 import './ItemListContainer.css'
 
-const ItemListContainer = () => {
+const ItemCategoryContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { categoryId } = useParams(); 
+    const { id } = useParams(); 
     
-    const getProducts = () => {
+    console.log("category", id);
+
+    const getProdsCateg = () => {
       const docs = [];
       db.collection('productos').onSnapshot((querySnapshot) => {
         querySnapshot.forEach ((doc) => {
-          docs.push ({ ...doc.data(), id: doc.id})
+          console.log("DOC", querySnapshot);
+            if (doc.category === "flores"){
+                docs.push ({ ...doc.data(), id: doc.id})
+            };
         });
+        setProducts(docs);
+        
       });
-
-     // if (categoryId) {
-      //  const prodsCategoria = docs.filter(producto => producto.category === categoryId); 
-       // setProducts(prodsCategoria);
-     // } else {  
-       setProducts(docs);
-       console.log("Productos",docs);
-      //}
     };
 
     useEffect(() => {
-      getProducts();
+      getProdsCateg();
+      console.log("Loading", loading);
       setLoading(false);
-      
-
+      console.log("productos",products);                 
     },[]);
   
     return ( 
@@ -40,5 +39,5 @@ const ItemListContainer = () => {
     )
 };
 
-export default ItemListContainer
+export default ItemCategoryContainer
 

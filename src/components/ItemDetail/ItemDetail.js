@@ -8,7 +8,7 @@ export const ItemDetail = ({ product }) => {
     const [cantCart,setCantCart] = useState(0);
     const [btnPayment,setBtnPayment] = useState(false);
     const { agregarProd } = useContext(CartContext);
-    
+   
     const onAdd = (cantidad) => {
         setCantCart(cantidad);
     };
@@ -17,15 +17,18 @@ export const ItemDetail = ({ product }) => {
       agregarProd(product.id, product.title, product.price, cantCart);
     };
     
-    
+       
     useEffect(() => {
         if (cantCart > 0) {
             setBtnPayment(true);
         }
     }, [cantCart]);
+    
+    console.log ("ID", product.id);
+    console.log ("nombre", product.title);
 
     return ( 
-        <div className="detalleItem">
+        <div key={product.id} className="detalleItem">
             <img src = { product.img } alt = "producto" />
             <p className="titulo">{product.title}</p>
             <p>${product.price}</p>
