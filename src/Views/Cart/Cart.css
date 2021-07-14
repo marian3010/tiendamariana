@@ -2,20 +2,19 @@
     display: grid;
     justify-content: left;
     align-items: center;
-    margin-left: 10px;
     margin-bottom: 10px;
     border-style: solid;
     border-color: green;
-    background-color: lightcyan;
-    padding: 10px;
-    max-width: 450px;
+    background-color: rgb(192, 236, 229);
+    padding-left: 10px;
+    width: 450px;
 }
 
 .color-verde {
     color: rgb(49, 179, 49);
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .vaciar-carro {
@@ -26,14 +25,16 @@
 }
 
 .carrito {
+    display: grid;
     margin-top: 30px;
-    margin-left: 100px;
     font-size: x-large;
+    justify-items: center;
+    align-content: center;
 }
 
 .nombre {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .boton-lista {
@@ -46,4 +47,10 @@
 
 .carrito-vacio {
     text-align: center;
+}
+
+.totales-carro {
+    /*display: grid;
+    grid-template-columns: auto auto;*/
+    /* width: 450px;*/
 }

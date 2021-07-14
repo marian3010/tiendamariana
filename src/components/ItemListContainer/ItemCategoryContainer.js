@@ -9,35 +9,35 @@ const ItemCategoryContainer = () => {
     const [loading, setLoading] = useState(true);
     const { id } = useParams(); 
     
-    console.log("category", id);
-
     const getProdsCateg = () => {
       const docs = [];
-      db.collection('productos').onSnapshot((querySnapshot) => {
-        querySnapshot.forEach ((doc) => {
-          console.log("DOC", querySnapshot);
-            if (doc.category === "flores"){
-                docs.push ({ ...doc.data(), id: doc.id})
-            };
-        });
-        setProducts(docs);
-        
-      });
+      db.collection('productos')
+			.get()
+			.then(function (querySnapshot) {
+				querySnapshot.forEach(function (doc) {
+				  docs.push({ ...doc.data(), id: doc.id });
+					const catItem = docs.filter(
+						(prod) => prod.category === id
+					);
+					setProducts(catItem);
+          
+				});
+        setLoading(false);
+			});
+          
     };
 
     useEffect(() => {
       getProdsCateg();
-      console.log("Loading", loading);
-      setLoading(false);
-      console.log("productos",products);                 
-    },[]);
+            
+    },[id]);
   
     return ( 
         <div className = 'item-container'>
-          {loading? <p>Loading .....</p> : <ItemList products={products}/>}
+          {loading? (<p>Loading .....</p>) : (<ItemList products={products}/>)}
         </div>
     )
 };
 
-export default ItemCategoryContainer
+export default ItemCategoryContainer;
 

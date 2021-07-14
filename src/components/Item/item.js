@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 const Item = ({ product }) => {
-
+console.log("producto", product);
     return (
       <Link className="productWrapper" to={`/products/${product.id}`} key={product.id}>
         <img src={product.img} alt="producto" />

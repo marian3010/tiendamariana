@@ -1,8 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-// 1 - CREAR EL CONTEXTO
 export const CartContext = createContext();
-
 
 export function CartProvider ({children}) {
     const [cart, setCart] = useState([]);
@@ -22,19 +20,28 @@ export function CartProvider ({children}) {
         setCart([]);
     }
 
-        const eliminoProduct = (prodInCart) => {
-        const indiceDelete = cart.findIndex((item) => item.id === prodInCart.id);
-        const copiaCart = Array.from(cart);
-
-        if (indiceDelete >= 0) {
-          copiaCart.splice(indiceDelete, 1);
-          setCart(copiaCart);   
-
+    function totalizarPrecio () {
+        if (cart.length > 0) {
+            let totalPrecio = 0
+            cart.forEach(element => {
+                totalPrecio=totalPrecio + (element.cantCart*element.price)
+            });
+           return totalPrecio;
         }
-      };
+    }
+
+    const eliminoProduct = (prodInCart) => {
+    const indiceDelete = cart.findIndex((item) => item.id === prodInCart.id);
+    const copiaCart = Array.from(cart);
+
+    if (indiceDelete >= 0) {
+        copiaCart.splice(indiceDelete, 1);
+        setCart(copiaCart);   
+        }
+    };
 
     return ( 
-        <CartContext.Provider value={{agregarProd, cart, setCart, eliminoProduct, clear}}>  
+        <CartContext.Provider value={{agregarProd, cart, setCart, eliminoProduct, clear, totalizarPrecio}}>  
             {children}
         </CartContext.Provider>
     );

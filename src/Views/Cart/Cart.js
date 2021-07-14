@@ -6,17 +6,20 @@ import './Cart.css';
 
 
 function Cart () {
-  const { cart, eliminoProduct, clear} = useContext(CartContext);
+  const { cart, eliminoProduct, clear, totalizarPrecio} = useContext(CartContext);
 
   const calcularPrecio = (price, cantCart) => {
     return price * cantCart;
   };
-  
   return (
     <div className="carrito">
       {cart.length ? (
-        <i class="fas fa-trash vaciar-carro" onClick={() => {clear();}}>  Vaciar el carrito </i>
+        <div>
+          <i className="fas fa-trash vaciar-carro" onClick={() => {clear();}}>  Vaciar el carrito </i>
+          <p className="vaciar-carro">Total Compra ${totalizarPrecio()}</p>
+        </div>  
       ) : (null)}
+      
       {cart.length ? (
          cart.map((product) => (
             <div key={product.id} className="cartProductsWrapper">
@@ -27,7 +30,7 @@ function Cart () {
             </div>
         ))
       ) : (
-        <div>
+        <div className="carrito-vacio">
           <h1>El carrito no tiene productos!</h1>
           <Link to="/" className="boton-lista" onClick={() => {}}>Ir al catálogo</Link>
         </div>  
