@@ -9,9 +9,11 @@ import Cart from './Views/Cart/Cart';
 
 //IMPORTO COMPONENTES
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCategoryContainer from './components/ItemListContainer/ItemCategoryContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import OrderForm from './components/Order/Order';
 import { CartProvider } from "./context/CartContext";
 
 function App () {
@@ -32,7 +34,11 @@ function App () {
               <Route path="/">
                 <ItemListContainer />
               </Route>
+              <Route path="/order">
+                <OrderForm />
+              </Route>
             </Switch>
+            <Footer />
           </div>
         </CartProvider>
       </Router>

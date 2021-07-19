@@ -18,7 +18,6 @@
 }
 
 .vaciar-carro {
-    margin-left: 20px;
     margin-bottom: 20px;
     color: black;
     font-size: 20px;
@@ -49,8 +48,10 @@
     text-align: center;
 }
 
-.totales-carro {
-    /*display: grid;
-    grid-template-columns: auto auto;*/
-    /* width: 450px;*/
+.boton-comprar {
+    background-color: rgb(49, 179, 49);
+    color: white;
+    font-size: 14px;
+    border-radius: 5%;
+    padding: 10px;
 }

@@ -1,0 +1,11 @@
+.boton-submit {
+    background-color: rgb(49, 179, 49);
+    color: white;
+    font-size: 14px;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.form-orden {
+    background-color: beige;
+}

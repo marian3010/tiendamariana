@@ -24,9 +24,7 @@ export const ItemDetail = ({ product }) => {
         }
     }, [cantCart]);
     
-    console.log ("ID", product.id);
-    console.log ("nombre", product.title);
-
+    
     return ( 
         <div key={product.id} className="detalleItem">
             <img src = { product.img } alt = "producto" />
@@ -35,7 +33,7 @@ export const ItemDetail = ({ product }) => {
             <p>Stock: {product.stock}</p>
             <ItemCount stock = { product.stock } valorInicial = { 1 } onAdd = { onAdd } />
             {btnPayment ? (<Link to="/Cart" className="btn-payment" onClick={() => {
-                finCompra();}}>Terminar mi compra</Link>
+                finCompra();}}>Comprar</Link>
             ) : null}
             <br></br>
             <Link to="/">Volver al Inicio</Link>
