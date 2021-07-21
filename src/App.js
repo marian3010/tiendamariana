@@ -13,7 +13,7 @@ import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCategoryContainer from './components/ItemListContainer/ItemCategoryContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import OrderForm from './components/Order/Order';
+import OrderForm from './components/Order/OrderForm';
 import { CartProvider } from "./context/CartContext";
 
 function App () {
@@ -31,11 +31,11 @@ function App () {
               <Route path="/products/:id">
                 <ItemDetailContainer />
               </Route>
-              <Route path="/">
-                <ItemListContainer />
-              </Route>
               <Route path="/order">
                 <OrderForm />
+              </Route>
+              <Route path="/">
+                <ItemListContainer />
               </Route>
             </Switch>
             <Footer />

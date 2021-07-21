@@ -4,8 +4,22 @@
     font-size: 14px;
     border-radius: 5%;
     padding: 10px;
+    margin-top: 10px;
+    border-color: rgb(36, 134, 36);
 }
 
-.form-orden {
-    background-color: beige;
+.boton-submit :hover {
+    background-color: rgb(80, 212, 80);
+}
+
+.form-buyer {
+    display: grid;
+    margin-top: 20px;
+    justify-items: center;
+    align-content: center;
+}
+
+.campo-buyer {
+    margin: 10px;
+    font-size: 20px;
 }
