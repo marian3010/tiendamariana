@@ -5,15 +5,15 @@ import './Order.css';
 
 const OrderForm = () => {
 	const [buyer, setBuyer] = useState([]);
+	const [nombre, setNombre] = useState('');
+	const [telefono, setTelefono] = useState('');
+	const [email, setEmail] = useState('');
 			
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		console.log("entre en el submit", e.target);
-		console.log(e.target.name, e.target.value);
-        const { name, value } = e.target;
+		const { name, value } = e.target;
 		setBuyer({ ...buyer, [name]: value });
-		console.log("buyer", buyer);
-		
+				
 	};
 	
 	useEffect (() => {
@@ -34,19 +34,22 @@ const OrderForm = () => {
 					<input className = "campo-buyer"
 						placeholder='Nombre completo'
 						name='nombre'
-						value={buyer.nombre}
+						onChange={ (e) => setNombre(e.target.value)}
+						value={nombre}
 					/>
 					<label>Teléfono</label>
 					<input className = "campo-buyer"
 						placeholder='Teléfono'
 						name='telefono'
-						value={buyer.telefono}
+						onChange={ (e) => setTelefono(e.target.value)}
+						value={telefono}
 					/>
 					<label>eMail</label>
 					<input type="email" className = "campo-buyer"
 						placeholder='eMail'
 						name='email'
-						value={buyer.email}
+						onChange={ (e) => setEmail(e.target.value)}
+						value={email}
 					/>
 					<button type="submit" className="boton-submit">
 						Enviar Orden
