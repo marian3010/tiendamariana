@@ -11,25 +11,30 @@ const Order = (buyer) => {
     const { cart, totalizarPrecio} = useContext(CartContext);
     const ordenes = db.collection("ordenes");
     
+    console.log("entre a Order");
+    console.log(buyer);
+
 	const nuevaOrden = {
-        buyer: ({buyer}),
+        buyer: buyer,
         items: cart,
         //date: firebase.firestore.Timestamp.fromDate(new Date()),
         total: totalizarPrecio()
     }
     
-    const guardarOrden = () =>{
-        console.log("estoy guardando la orden");
+    function guardarOrden () {
+        console.log("estoy guardando la orden", nuevaOrden);
         ordenes.add(nuevaOrden).then(({id}) => {
             setOrderId(id);
         }).finally(() => {
             setLoading(false);
+            
         }); 
     }
      
     useEffect(() => {
+        console.log ("entro al useEfect de Order");
         guardarOrden();
-    },[buyer])
+    },[nuevaOrden])
 
      
     return (

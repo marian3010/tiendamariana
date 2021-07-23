@@ -11,21 +11,23 @@ const OrderForm = () => {
 			
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		const { name, value } = e.target;
-		setBuyer({ ...buyer, [name]: value });
-				
+		console.log("nombre", nombre);
+		console.log("telefono", telefono);
+		console.log("email",email);
+
+		setBuyer({ 
+			name: nombre,
+			phone: telefono,
+			email: email
+		 });
+		 
 	};
 	
 	useEffect (() => {
-		if (buyer) {
-			<Order order={buyer}/>
-		}
-		return () => {
-			<p>No hay datos cargados</p>
-		};
+		console.log("mostrar el buyer en el useEffect", buyer);
+		<Order buyer={buyer}/>
+				
 	}, [buyer]);
-
-	
 
 		return (
 			<div>
