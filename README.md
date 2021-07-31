@@ -1,5 +1,8 @@
 # Aplicación de eCommerce para el curso React JS
 ## La tienda llamada Coco´s Gallery ofrece un catálogo de imágenes digitales a la venta.
+
+![tiendaMariana](https://user-images.githubusercontent.com/78000027/127745193-34975ad3-d9c4-4333-bb54-6a0bb9b880b1.gif)
+
 Screen del Inicio
 ![image](https://user-images.githubusercontent.com/78000027/127727386-6021835d-6262-43d9-8c55-2fefbf2168b3.png)
 
