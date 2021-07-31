@@ -5,13 +5,12 @@
     margin-bottom: 10px;
     border-style: solid;
     border-color: rgb(49, 179, 49);
-    background-color: rgb(214, 252, 245);
     padding-left: 10px;
-    width: 500px;
+    width: 600px;
 }
 
-.color-verde {
-    color: rgb(49, 179, 49);
+.color-negro {
+    color: black;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 15px;
@@ -49,7 +48,7 @@
 }
 
 .boton-comprar {
-    background-color: rgb(49, 179, 49);
+    background-color: red;
     color: white;
     font-size: 14px;
     border-radius: 5%;

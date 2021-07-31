@@ -9,10 +9,10 @@ function NavBar () {
     return ( 
         
         <nav className = "barra-menu">
+            <ul className="logo-menu">
+                <Link to="/"><img className="logo" src = { logo } alt = "Logo" /></Link>   
+            </ul>
             <ul className="lista-menu">
-                <li className="item-menu">
-                 <Link to="/"><img className="logo" src = { logo } alt = "Logo" /></Link>   
-                </li>
                 <li className="item-menu">
                     <Link to="/">Inicio</Link>
                 </li>

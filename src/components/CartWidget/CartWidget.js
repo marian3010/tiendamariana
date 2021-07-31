@@ -20,8 +20,8 @@ const CartWidget = () => {
     return ( 
         <Link to="/cart">
             {cart.length ? <p className="cantidad">{totalizarCantidad()}</p> : null}
-            <i class = "fas fa-shopping-cart color-carro" />
-            {cart.length ? <p className="totalpesos">Mi carrito ${totalizarPrecio()}</p> : null}
+            <i className = "fas fa-shopping-cart color-carro" />
+            {cart.length ? <p className="totalpesos">Total ${totalizarPrecio()}</p> : null}
         </Link>
     )
 

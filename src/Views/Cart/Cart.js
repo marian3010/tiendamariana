@@ -20,8 +20,8 @@ function Cart () {
             <div key={product.id} className="cartProductsWrapper">
               <p className="nombre">{product.title}</p>
               <p>Precio total ${calcularPrecio(product.price, product.cantCart)}</p>
-             <p>Cantidad: {product.cantCart}</p>
-              <i class="fas fa-trash color-verde" onClick={() => {eliminoProduct(product);}}>Eliminar Producto</i>
+              <p>Cantidad: {product.cantCart}</p>
+              <i class="fas fa-trash color-negro" onClick={() => {eliminoProduct(product);}}>Eliminar Producto</i>
            </div>
           ))}
         </div>

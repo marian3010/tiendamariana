@@ -19,7 +19,7 @@ const DropDown = () => {
     <div className="dropdown">
       <a onClick={() => setIsOpen(!isOpen)}>Categorías</a>
       {isOpen ? (
-        <ul class="dropdown-content">
+        <ul className="dropdown-content">
           {categorias.map((category) => (
             <Link to={`/category/${category.id}`} >{category.title}</Link>
             ))}

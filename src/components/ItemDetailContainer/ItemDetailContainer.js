@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css'
 import { useParams } from "react-router";
-import { db} from '../../firebase';
+import { getFirestore } from '../../firebase';
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
     
     const getProduct = () => {
-     
+      const db = getFirestore();
       db.collection('productos').doc(id).get()
           .then(snapshot => setProduct({...snapshot.data(), id: snapshot.id})
           )
@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
       getProduct();
       setLoading(false);
-    }, []);
+    },[]);
   
     return ( 
         <div className = "itemDetailCont">

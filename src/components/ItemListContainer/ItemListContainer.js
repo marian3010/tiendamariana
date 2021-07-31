@@ -1,6 +1,6 @@
 import { ItemList } from "../ItemList/ItemList";
 import React, { useEffect, useState } from "react";
-import { db} from '../../firebase';
+import {getFirestore} from '../../firebase';
 import './ItemListContainer.css'
 
 const ItemListContainer = () => {
@@ -9,6 +9,7 @@ const ItemListContainer = () => {
     
     const getProducts = () => {
       const docs = [];
+      const db = getFirestore();
       db.collection('productos')
 			.get()
 			.then(function (querySnapshot) {

@@ -1,31 +1,52 @@
 .detalleItem {
+    display: grid;
+    grid-template-columns: auto auto;
     text-align: center;
-    margin-left: 450px;
-    margin-right: 450px;
-    background: rgb(255, 204, 153);
+    background: lightyellow;
     border-style: solid;
-    border-color: #ffb366;
+    border-color: #f5a452;
     padding: 10px;
-    max-width: 300px;
+    width: 30%;
+}
+
+.prod-img {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+.prod-info {
+    display: grid;
+    text-align: center;
+    justify-content: center;
 }
 
 .detalleItem a {
     color: black;
-    font-size: 12px;
-    padding-top: 20 px;
+    font-size: 18px;
+    padding: 5px;
 }
 
 .titulo {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 600;
+}
+
+.precio {
+    font-size: 26px;
+}
+
+.stock {
+    font-size: 26px;
 }
 
 .btn-payment {
     background-color: #f5a453;
+    border-color: #f1963a;
+    border-style: solid;
     color: black;
-    font-size: 18px;
-    height: 30px;
-    border-radius: 5%;
+    font-size: 20px;
     padding: 5px;
     text-align: center;
+    margin-top: 5px;
 }

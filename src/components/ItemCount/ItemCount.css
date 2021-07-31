@@ -1,21 +1,24 @@
 .boton-carrito {
-    background-color: rgb(232, 238, 232);
-    border-color: rgb(183, 192, 183);
+    background-color: #f5b97e;
+    border-color: #f1963a;
     border-radius: 5%;
     color: black;
+    font-size: 16px;
     text-align: center;
     margin-top: 20px;
-    height: 30px;
+    margin-bottom: 10px;
+    height: 32px;
 }
 
 .boton-cantidad {
-    background-color: white;
-    border-color: white;
+    background-color: #f5b97e;
+    border-color: #f1963a;
     font-size: 25px;
     color: black;
     text-align: center;
     height: 30px;
     width: 30px;
+    margin-top: 5px;
 }
 
 .contenedor {

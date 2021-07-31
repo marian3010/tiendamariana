@@ -27,16 +27,21 @@ export const ItemDetail = ({ product }) => {
     
     return ( 
         <div key={product.id} className="detalleItem">
-            <img src = { product.img } alt = "producto" />
-            <p className="titulo">{product.title}</p>
-            <p>${product.price}</p>
-            <p>Stock: {product.stock}</p>
-            <ItemCount stock = { product.stock } valorInicial = { 1 } onAdd = { onAdd } />
-            {btnPayment ? (<Link to="/Cart" className="btn-payment" onClick={() => {
-                finCompra();}}>Comprar</Link>
-            ) : null}
-            <br></br>
-            <Link to="/">Volver al Inicio</Link>
+            <div className="prod-img">
+                <img src = { product.img } alt = "producto" />
+                <Link to="/">Volver al Inicio</Link>
+            </div>
+            <div className="prod-info">
+                <p className="titulo">{product.title}</p>
+                <p className="precio">${product.price}</p>
+                <p className="stock">Stock: {product.stock}</p>
+                <ItemCount stock = { product.stock } valorInicial = { 1 } onAdd = { onAdd } />
+                {btnPayment ? (<Link to="/Cart" className="btn-payment" onClick={() => {
+                    finCompra();}}>Comprar</Link>
+             ) : null}
+                <br></br>
+                
+            </div>
         </div>
     );
 };

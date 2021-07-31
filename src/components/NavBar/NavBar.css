@@ -1,28 +1,41 @@
 .barra-menu {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 110px;
     vertical-align: middle;
     background-color: white;
 }
 
 .lista-menu {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    width: 100%;
     list-style-type: none;
     align-items: center;
+    background-color: rgb(49, 179, 49);
+    height: 90px;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    align-items: center;
+    background-color: rgb(49, 179, 49);
+    height: 90px;
 }
 
 .item-menu a {
     display: block;
-    color: rgb(49, 179, 49);
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    width: 125px;
 }
 
 .logo {
-    margin-right: 60px;
+    margin-left: 10px;
 }
 
 .dropdown {

@@ -1,8 +1,9 @@
 .itemDetailCont {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     align-content: center;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 30px;
 }

@@ -1,7 +1,7 @@
 import { ItemList } from "../ItemList/ItemList";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { db} from '../../firebase';
+import { getFirestore } from '../../firebase';
 import './ItemListContainer.css'
 
 const ItemCategoryContainer = () => {
@@ -11,6 +11,7 @@ const ItemCategoryContainer = () => {
     
     const getProdsCateg = () => {
       const docs = [];
+      const db = getFirestore();
       db.collection('productos')
 			.get()
 			.then(function (querySnapshot) {
