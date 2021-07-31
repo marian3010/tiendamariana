@@ -18,10 +18,14 @@ function Cart () {
         <div>
           {cart.map((product) => (
             <div key={product.id} className="cartProductsWrapper">
-              <p className="nombre">{product.title}</p>
-              <p>Precio total ${calcularPrecio(product.price, product.cantCart)}</p>
-              <p>Cantidad: {product.cantCart}</p>
-              <i class="fas fa-trash color-negro" onClick={() => {eliminoProduct(product);}}>Eliminar Producto</i>
+              <div className="datos-producto">
+                <p className="nombre">{product.title}</p>
+                <p>Precio total: ${calcularPrecio(product.price, product.cantCart)}</p>
+                <p>Cantidad: {product.cantCart}</p>
+              </div>  
+              <div className="btn-eliminar">
+                <i class="fas fa-trash color-negro" onClick={() => {eliminoProduct(product);}}></i>
+              </div>
            </div>
           ))}
         </div>

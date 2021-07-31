@@ -29,11 +29,12 @@ export const ItemDetail = ({ product }) => {
         <div key={product.id} className="detalleItem">
             <div className="prod-img">
                 <img src = { product.img } alt = "producto" />
+                <p className="description">{product.description}</p>
                 <Link to="/">Volver al Inicio</Link>
             </div>
             <div className="prod-info">
                 <p className="titulo">{product.title}</p>
-                <p className="precio">${product.price}</p>
+                <p className="stock">${product.price}</p>
                 <p className="stock">Stock: {product.stock}</p>
                 <ItemCount stock = { product.stock } valorInicial = { 1 } onAdd = { onAdd } />
                 {btnPayment ? (<Link to="/Cart" className="btn-payment" onClick={() => {

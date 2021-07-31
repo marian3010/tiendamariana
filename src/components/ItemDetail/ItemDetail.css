@@ -7,6 +7,7 @@
     border-color: #f5a452;
     padding: 10px;
     width: 30%;
+    margin-top: 20px;
 }
 
 .prod-img {
@@ -21,10 +22,10 @@
     justify-content: center;
 }
 
-.detalleItem a {
-    color: black;
-    font-size: 18px;
-    padding: 5px;
+.prod-img a {
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
 }
 
 .titulo {
@@ -32,8 +33,9 @@
     font-weight: 600;
 }
 
-.precio {
-    font-size: 26px;
+.description {
+    font-size: 18px;
+    max-width: 250px;
 }
 
 .stock {
